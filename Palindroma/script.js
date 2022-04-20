@@ -1,7 +1,35 @@
 // Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma
 
+
+/* Logica
+  1. Ottieni le stringhe o i numeri dall'utente.
+  2. Funzione che capovolge la stringa
+  3. Funzione check palindromo che confronta la stringa presa dall'utente con quella rovesciata
+*/
+
+
+
+// 1. Ottieni le stringhe o i numeri dall'utente
+
 const word = prompt("Inserisci una parola")
 
-function name(params) {
+
+// 2. Funzione che capovolge la stringa
+function reverseString (string) {
+
+  let splitString = string.split("");
+
+  let reverseArray = splitString.reverse();
+
+  let RecreateArray = reverseArray.join("");
+
+  return RecreateArray;
+
+} 
+
+console.log(reverseString(word));
+
+
+// function checkPalindromo () {
   
-}
+// }
