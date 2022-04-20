@@ -45,3 +45,16 @@ function somma(number1, number2) {
 
 const sum = somma(userNumber, pcNumber);
 console.log("Somma:", sum);
+
+
+// 4. Creiamo una funzione che determina se la somma è pari o dispari e creiamo delle condition if che determino il vincitore
+
+function pariDispari (){
+  if (sum % 2) {
+    return "dispari"
+  } else {
+    return "pari"
+  }
+}
+
+console.log(pariDispari());
