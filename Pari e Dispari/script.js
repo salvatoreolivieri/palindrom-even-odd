@@ -22,8 +22,10 @@ Dichiariamo chi ha vinto.
 
 //1. Ottieni le stringhe o i numeri dall'utente.
 
+const userPlayer = prompt("Pari o dispari?");
 const userNumber = parseInt((prompt("Inserisci un numero da 1 a 5")));
 
+console.log("L'utente ha selezionato:", userPlayer);
 console.log("User Number:", userNumber);
 
 
@@ -51,10 +53,10 @@ console.log("Somma:", sum);
 // 4. Creiamo una funzione che determina se la somma è pari o dispari e creiamo delle condition if che determino il vincitore
 
 function pariDispari (){
-  if (sum % 2) {
-    return "dispari"
+  if (sum % 2 && userPlayer === "pari") {
+    return "dispari: Hai perso"
   } else {
-    return "pari"
+    return "pari: Hai vinto"
   }
 }
 
@@ -68,6 +70,7 @@ console.log(pariDispari());
 const btnConferma = document.querySelector('#conferma');
 
 btnConferma.addEventListener("click", function(){
+  const userPlayer = document.getElementById("userPlayer").value;
   const userNumber = parseInt(document.getElementById("numberUser").value);
   console.log("User Number:", userNumber);
 
@@ -87,10 +90,10 @@ btnConferma.addEventListener("click", function(){
   console.log("Somma:", sum);
 
   function pariDispari (){
-    if (sum % 2) {
-      return "dispari"
+    if (sum % 2 && userPlayer === "pari") {
+      return "dispari: hai perso"
     } else {
-      return "pari"
+      return "pari: hai vinto"
     }
   }
   
