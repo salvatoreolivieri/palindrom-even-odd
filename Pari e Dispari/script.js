@@ -23,6 +23,7 @@ Dichiariamo chi ha vinto.
 //1. Ottieni le stringhe o i numeri dall'utente.
 
 const userNumber = parseInt((prompt("Inserisci un numero da 1 a 5")));
+
 console.log("User Number:", userNumber);
 
 
@@ -58,3 +59,41 @@ function pariDispari (){
 }
 
 console.log(pariDispari());
+
+
+
+
+// BONUS
+
+const btnConferma = document.querySelector('#conferma');
+
+btnConferma.addEventListener("click", function(){
+  const userNumber = parseInt(document.getElementById("numberUser").value);
+  console.log("User Number:", userNumber);
+
+  function getRandomNumber(max , min) {
+    return Math.floor(Math.random() * (max)) + min;
+  }
+  
+  const pcNumber = (getRandomNumber(5,1)); 
+  console.log("pc Number:", pcNumber);
+
+  function somma(number1, number2) {
+    const sum = number1 + number2;
+    return sum;
+  }
+  
+  const sum = somma(userNumber, pcNumber);
+  console.log("Somma:", sum);
+
+  function pariDispari (){
+    if (sum % 2) {
+      return "dispari"
+    } else {
+      return "pari"
+    }
+  }
+  
+  console.log(pariDispari());
+
+})
