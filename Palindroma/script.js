@@ -42,3 +42,44 @@ function checkPalindromo (string) {
 }
 
 console.log(checkPalindromo());
+
+
+// BONUS
+
+const btnConferma = document.querySelector("#conferma")
+
+btnConferma.addEventListener("click", function(){
+
+  const word = document.getElementById("word").value;
+  console.log(word);
+
+
+  function reverseString (string) {
+
+    let splitString = string.split("");
+
+    let reverseArray = splitString.reverse();
+
+    let RecreateArray = reverseArray.join("");
+
+    return RecreateArray;
+  } 
+
+  console.log(reverseString(word));
+
+
+  function checkPalindromo (string) {
+
+    if (reverseString(word) === word) {
+      return console.log("è palindromo");
+    } else {
+      return console.log("Non è palindromo");
+    }
+  
+  }
+
+  console.log(checkPalindromo());
+
+
+
+})
